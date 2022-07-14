@@ -1400,7 +1400,7 @@ int dsi_display_set_power(struct drm_connector *connector,
 			asus_display_set_panel_aod_bl();
 			asus_var_manual_idle_out = false;
 			// ASUS_BSP +++ Touch
-			//phone_touch_suspend();
+			phone_touch_suspend();
 			// ASUS_BSP --- Touch
 		}
 
