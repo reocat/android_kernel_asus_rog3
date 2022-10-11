@@ -782,6 +782,8 @@ static int report_gesture_key(struct input_dev *dev, char keycode)
 		if(keycode == 'U') {
 			ts_info("[KEY_U] keycode = U");
 			enable_aod_processing(false);
+			data_x = 0;
+			data_y = 0;
 			return 3;
 		}
 		if(keycode == 'L') {
