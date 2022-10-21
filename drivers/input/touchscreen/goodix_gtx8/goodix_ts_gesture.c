@@ -752,6 +752,11 @@ static int report_gesture_key(struct input_dev *dev, char keycode)
 	}
 
 	if(in_aod_doze_mode) {
+		if (proximityStatus() == true) {
+			ts_info("P-sensor near, disable gesture mode");
+			return 2;
+		}
+
 		if(keycode == 'F') {
 			input_switch_key(dev, KEY_F);
 			ts_info("KEY_F");
